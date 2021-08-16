@@ -87,21 +87,21 @@
                     <a :href="key" target="_blank"><img :src="key" alt="955b661eb00388eebfaa98a0dd16e74"></a></div>
             </div>
             <div style="width:50%;display: flex;justify-content: center;flex-wrap: wrap;">
-                <div>
+                <div style="color:red">
                     <h3>个人声明</h3>
                     <ol>
                         <li>个人行为,没有受任何人指派,也不为挣钱,不为冲热度,只是用自己的方式试图帮助受害者！</li>
                         <li>只是用自己方式进行传播让更多人支持受害者！</li>
                         <li>个人力量有限,如果可以的话可以将你们收集的信息交给我,有时间我会增加上去</li>
-                        <li><a href=mailto:blackdogOD7@outlook.com>发送email联系我</a></li>
+                        <li><a style="color:rgb(117, 2, 2)" href=mailto:blackdogOD7@outlook.com>发送email联系我</a></li>
+                        <li>访问不会侵犯您的隐私,所有用户信息(session,local,cookies)本人均不会记录</li>
                     </ol>
                 </div>
-                <div style="width:100%;">
+                <div>
                     <h3>图墙url</h3>
                     <ul>
-                        <li v-for=" key in videoSrcLists"><a
-                                style="display: inline-block;text-decoration:none;word-break:break-all" :href="key"
-                                target="_blank">{{key}}</a></li>
+                        <li v-for=" key in videoSrcLists"><a style="display: inline-block;word-break:break-all"
+                                :href="key" target="_blank">{{key}}</a></li>
                     </ul>
                 </div>
             </div>
