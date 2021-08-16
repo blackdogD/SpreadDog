@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+        }
+
+        div {
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .video {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pics {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .pics img {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="title">
+                <h1>请帮帮她</h1>
+            </div>
+            <div class="video">
+                <iframe width="800" height="600" src="https://www.bilibili.com/video/BV1N341167o6"></iframe>
+            </div>
+            <div class="pics">
+                <a v-for="key in videoSrcLists" :href="key" target="_blank"><img :src="key"
+                        alt="955b661eb00388eebfaa98a0dd16e74"></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                videoSrcLists: ["https://i.ibb.co/gRs6g4G/955b661eb00388eebfaa98a0dd16e74.jpg",
+                    "https://i.ibb.co/Yd9JMDG/debd6dffd43f9431cbcb73882db0a55.jpg",
+                    "https://i.ibb.co/bJ02FgS/ae48db5bb81df44ed7495ed3adb27a9.jpg",
+                    "https://i.ibb.co/rxm2Jjp/12501edcdfc93cd0edcfff606916b16.jpg",
+                    "https://i.ibb.co/ZckQFd4/0775ed325150ed81be6a69d1dd5caec.jpg",
+                    "https://i.ibb.co/BcF3B0f/2be85b6651fc884d86ebab9f26e01f7.jpg"
+                ],
+            },
+            methods: {},
+            created() {
+                console.log("=====>");
+            }
+        })
+    </script>
+
+</body>
+
+</html>
