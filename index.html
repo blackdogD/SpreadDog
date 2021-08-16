@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>请帮帮这个姑娘~</title>
     <style>
         body,
         html {
             margin: 0;
             padding: 0;
             background-color: pink;
-        }
-
-        div {
-            width: 100%;
         }
 
         .container {
@@ -26,22 +22,29 @@
         }
 
         .title {
+            width: 100%;
             text-align: center;
         }
 
         .video {
+            width: 100%;
             display: flex;
             justify-content: center;
         }
 
         .pics {
+            width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             margin-top: 10px;
         }
 
-        .pics img {
-            margin-left: 10px;
+        .pics div {
+            flex: 0 0 auto;
+            flex-wrap: wrap;
+            margin: 10px;
         }
     </style>
 </head>
@@ -50,14 +53,32 @@
     <div id="app">
         <div class="container">
             <div class="title">
-                <h1>请帮帮她</h1>
+                <h1>请帮帮她~</h1>
+                <p>因为b站和微博的一些封禁,可能会让这件事儿石沉大海！互联网是有记忆的！</p>
+                <p>希望可以通过这种方式帮助到受害者！让大家都关注这件事！</p>
+                <p>应该让该付出代价的人付出代价,而不是逍遥法外！</p>
             </div>
             <div class="video">
                 <iframe width="800" height="600" src="https://www.bilibili.com/video/BV1N341167o6"></iframe>
             </div>
+            <div>
+                <h3>信息公布！</h3>
+            </div>
             <div class="pics">
-                <a v-for="key in videoSrcLists" :href="key" target="_blank"><img :src="key"
-                        alt="955b661eb00388eebfaa98a0dd16e74"></a>
+                <div v-for="key in videoSrcLists">
+                    <a :href="key" target="_blank"><img :src="key" alt="955b661eb00388eebfaa98a0dd16e74"></a></div>
+            </div>
+            <ol>
+                <li>个人行为,没有受任何人指派,也不为挣钱,不为冲热度,只是用自己的方式试图帮助受害者！</li>
+                <li>只是用自己方式进行传播让更多人支持受害者！</li>
+                <li>个人力量有限,如果可以的话可以将你们收集的信息交给我,有时间我会增加上去</li>
+                <li><a href=mailto:blackdogOD7@outlook.com>发送email联系我</a></li>
+            </ol>
+            <div>
+                <h3>图墙url</h3>
+                <ul>
+                    <li v-for="key in videoSrcLists"><a :href="key" target="_blank">{{key}}</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -76,7 +97,7 @@
             },
             methods: {},
             created() {
-                console.log("=====>");
+                console.log("做的很简单也很粗糙~~~勿喷哈~~~大佬们");
             }
         })
     </script>
