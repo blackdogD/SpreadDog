@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>请帮帮这个姑娘~</title>
     <style>
-        body,
         html {
-            margin: 0;
-            padding: 0;
+            width: 100%;
+        }
+
+        body,
+        ul,
+        ol {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #app {
+            width: 100%;
             background-color: pink;
+            padding: 1rem;
+            box-sizing: border-box;
         }
 
         .container {
@@ -19,6 +31,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            font-size: 1rem;
         }
 
         .title {
@@ -46,10 +59,15 @@
             flex-wrap: wrap;
             margin: 10px;
         }
+
+        h3 {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
     <div id="app">
         <div class="container">
             <div class="title">
@@ -68,21 +86,27 @@
                 <div v-for="key in videoSrcLists">
                     <a :href="key" target="_blank"><img :src="key" alt="955b661eb00388eebfaa98a0dd16e74"></a></div>
             </div>
-            <ol>
-                <li>个人行为,没有受任何人指派,也不为挣钱,不为冲热度,只是用自己的方式试图帮助受害者！</li>
-                <li>只是用自己方式进行传播让更多人支持受害者！</li>
-                <li>个人力量有限,如果可以的话可以将你们收集的信息交给我,有时间我会增加上去</li>
-                <li><a href=mailto:blackdogOD7@outlook.com>发送email联系我</a></li>
-            </ol>
-            <div>
-                <h3>图墙url</h3>
-                <ul>
-                    <li v-for="key in videoSrcLists"><a :href="key" target="_blank">{{key}}</a></li>
-                </ul>
+            <div style="width:50%;display: flex;justify-content: center;flex-wrap: wrap;">
+                <div>
+                    <h3>个人声明</h3>
+                    <ol>
+                        <li>个人行为,没有受任何人指派,也不为挣钱,不为冲热度,只是用自己的方式试图帮助受害者！</li>
+                        <li>只是用自己方式进行传播让更多人支持受害者！</li>
+                        <li>个人力量有限,如果可以的话可以将你们收集的信息交给我,有时间我会增加上去</li>
+                        <li><a href=mailto:blackdogOD7@outlook.com>发送email联系我</a></li>
+                    </ol>
+                </div>
+                <div style="width:100%;">
+                    <h3>图墙url</h3>
+                    <ul>
+                        <li v-for=" key in videoSrcLists"><a
+                                style="display: inline-block;text-decoration:none;word-break:break-all" :href="key"
+                                target="_blank">{{key}}</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
     <script>
         var app = new Vue({
             el: "#app",
